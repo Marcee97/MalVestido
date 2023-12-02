@@ -1,5 +1,7 @@
 @import "./resets/reset.scss";
 
+body{
+overflow: hidden;
 
 
 .header {
@@ -15,6 +17,8 @@
     background: rgba($color: #000000, $alpha: 0.790);
     color: #fff;
     backdrop-filter: blur(2px);
+    z-index: 55;
+    position: relative;
     
     .contenedor-buscador{
       overflow: hidden;
@@ -91,7 +95,6 @@
     .icono-shop{
       position: relative;
       font-size: 1em;
-     z-index: 9;
      cursor:pointer;
     }
     .numero-de-compras{
@@ -134,14 +137,15 @@
     transform: translateX(-100%);
     
   }
-.section-carrito{
-  overflow: hidden;
-  
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  
+
+
+  .section-carrito{
+    position: absolute;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    outline: 1px solid red;
+    top: 0px;
 
   .contenedor-seccion-carrito{
     text-align: start;
@@ -150,10 +154,9 @@
     color: #fff;
     height: 109vh;
     position: absolute;
-    top: 0px;
-    z-index: 55;
+    overflow: hidden;
     transition: .5s all;
-    
+    z-index: 75;
     .header-seccion-carrito{
       display: flex;
       background: #111111;
@@ -167,12 +170,12 @@
       }
       .flecha-back-seccion-carrito{
         font-size: 2.2em;
+        cursor:pointer;
       }
     }
   
   }
-  .contenedor-carrito-desplegado{
-    visibility: visible;
+  .carrito-activo{
     transform: translateX(100%);
     
   }
@@ -188,7 +191,16 @@
  
 }
 }
+
+
+
+
+
+
+
+
 .main{
+  
   .section-ropa{
     display: flex;
     justify-content: center;
@@ -213,14 +225,18 @@
           justify-content: center;
           align-items: center;
           position: absolute;
-          bottom: 45px;
+          bottom: 26%;
+          transform: translateY(-26%);
           left: 50%;
           transform: translateX(-50%);
+          
           border: none;
           width: 90%;
           padding: 4px;
           background: rgba($color: #000000, $alpha: 0.800);
           color: #fff;
+          font-size: .6em;
+         cursor: pointer;
           .truck-envios{
             margin-right: 11px;
             transform: rotateY(180deg);
@@ -230,4 +246,5 @@
      
     }
   }
+}
 }

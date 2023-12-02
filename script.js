@@ -4,9 +4,18 @@ const botonBuscar               = document.querySelector('.icono-buscar');
 const botonBack                 = document.querySelector('.flecha-back');
 const buscadorDesplegable       = document.querySelector('.buscador');
 const titulo                    = document.querySelector('.titulo');
-const botonBackCarrito         = document.querySelector('.flecha-back-seccion-carrito');
-const botonCarritoShop          = document.querySelector('.icono-shop')
-const seccionCarritoDesplegable = document.querySelector('.contenedor-seccion-carrito')
+const botonBackCarrito          = document.querySelector('.flecha-back-seccion-carrito');
+const botonCarritoShop          = document.querySelector('.icono-shop');
+const seccionCarritoDesplegable = document.querySelector('.contenedor-seccion-carrito');
+const seccionCarrito            = document.querySelector('.section-carrito')
+const botonAddCarrito           = document.querySelectorAll('.button-add-carrito');
+
+botonAddCarrito.forEach((botones)=>{
+
+botones.addEventListener('click',()=>{
+    console.log('apretaste el boton carrito')
+})
+})
 
 
 botonMenu.addEventListener('click',()=>{
@@ -35,9 +44,11 @@ botonBack.addEventListener('click',()=>{
 })
 
 botonCarritoShop.addEventListener('click',()=>{
-    seccionCarritoDesplegable.classList.toggle("contenedor-carrito-desplegado")
+    // let displaySeccionCarrito = window.getComputedStyle(seccionCarrito).display;
+    // seccionCarrito.style.display = displaySeccionCarrito === 'none' ? 'block' : 'none'
+    seccionCarritoDesplegable.classList.toggle("carrito-activo")
 })
 botonBackCarrito.addEventListener('click',()=>{
-    seccionCarritoDesplegable.classList.toggle("contenedor-carrito-desplegado")
+    seccionCarritoDesplegable.classList.toggle("carrito-activo")
 })
 

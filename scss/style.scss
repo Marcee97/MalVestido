@@ -1,7 +1,9 @@
 @import "./resets/reset.scss";
 
+
+
 .header {
-  z-index: 15;
+ 
   
   .nav {
     display: flex;
@@ -13,7 +15,7 @@
     background: rgba($color: #000000, $alpha: 0.790);
     color: #fff;
     backdrop-filter: blur(2px);
-   
+    
     .contenedor-buscador{
       overflow: hidden;
       width: 100%;
@@ -45,6 +47,7 @@
           right:60px;
           top: 1px;
           cursor: pointer;
+          font-size: 1em;
         }
         .buscador-button{
           border: none;
@@ -66,10 +69,11 @@
       margin-right: 9px;
       font-size: .9em;
       cursor:pointer;
+      font-size: 1em;
     }
     .icono-menu{
       flex-grow: 0;
-      font-size: 1.1em;
+      font-size: 1em;
       cursor:pointer;
     }
     h4{
@@ -80,18 +84,18 @@
 
     .icono-buscar{
       margin-right: 9px;
-      font-size: 1.1em;
+      font-size: 1em;
       cursor:pointer;
     
     }
     .icono-shop{
       position: relative;
-      font-size: 1.1em;
+      font-size: 1em;
      z-index: 9;
      cursor:pointer;
     }
     .numero-de-compras{
-    
+      text-align: center;
       position: absolute;
       font-size: .6em;
       font-family: monospace;
@@ -105,7 +109,6 @@
      
     }
 
-   
   }
   .ul-menu {
     list-style: none;
@@ -131,5 +134,100 @@
     transform: translateX(-100%);
     
   }
+.section-carrito{
+  overflow: hidden;
+  
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  
+
+  .contenedor-seccion-carrito{
+    text-align: start;
+    width: 100%;
+    background: rgba($color: #000000, $alpha: 0.98);
+    color: #fff;
+    height: 109vh;
+    position: absolute;
+    top: 0px;
+    z-index: 55;
+    transition: .5s all;
+    
+    .header-seccion-carrito{
+      display: flex;
+      background: #111111;
+      align-items: center;
+
+      h2{
+        padding: .7em;
+        font-family: monospace;
+        font-weight: 100;
+        font-size: 1.9em;
+      }
+      .flecha-back-seccion-carrito{
+        font-size: 2.2em;
+      }
+    }
+  
+  }
+  .contenedor-carrito-desplegado{
+    visibility: visible;
+    transform: translateX(100%);
+    
+  }
  
+  .ul-carrito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size: 1.2em;
+  }
+ 
+}
+}
+.main{
+  .section-ropa{
+    display: flex;
+    justify-content: center;
+    background: #1f1e1e;
+    padding-top: 2em;
+    padding-bottom: 2.5em;
+    
+    .contenedor-ropa{
+      display: flex;
+      flex-direction: column;
+      width: 48%;
+      margin: 5px;
+      position: relative;
+      color: #fff;
+      font-family: monospace;
+      font-size: 1.2em;
+      .ropa-info{
+        text-align: center;
+        
+        .button-add-carrito{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          bottom: 45px;
+          left: 50%;
+          transform: translateX(-50%);
+          border: none;
+          width: 90%;
+          padding: 4px;
+          background: rgba($color: #000000, $alpha: 0.800);
+          color: #fff;
+          .truck-envios{
+            margin-right: 11px;
+            transform: rotateY(180deg);
+          }
+         }
+      }
+     
+    }
+  }
 }

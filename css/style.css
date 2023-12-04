@@ -14,7 +14,7 @@ body .header .nav {
   align-items: center;
   padding: 9px 13px 9px 13px;
   font-size: 1.8em;
-  background: rgba(0, 0, 0, 0.79);
+  background: rgba(0, 0, 0, 0.96);
   color: #fff;
   backdrop-filter: blur(2px);
   z-index: 55;
@@ -103,8 +103,11 @@ body .header .nav .numero-de-compras {
   z-index: 0;
 }
 body .header .ul-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   list-style: none;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.98);
   padding: 0px;
   overflow: hidden;
   transition: 0.3s;
@@ -113,11 +116,28 @@ body .header .ul-menu {
   color: #fff;
   position: absolute;
   backdrop-filter: blur(2px);
+  z-index: 55;
+  padding: 2px;
+  font-family: monospace;
+  font-size: 1.2em;
+}
+body .header .ul-menu hr {
+  background-color: #3f3e3e;
+  height: 1px;
+  border: 0;
+  margin: 5px 0px 5px 0px;
+  width: 100%;
+}
+body .header .ul-menu .btn-cerrar-menu {
+  text-align: end;
+  margin: 5px;
+  cursor: pointer;
 }
 body .header .ul-menu li {
   font-size: 1.2em;
-  margin: 9px;
+  margin-top: 9px;
   transition: 1s all;
+  padding: 0.3em;
 }
 body .header .ul-menu.activo {
   visibility: visible;
@@ -171,7 +191,7 @@ body .header .section-carrito .ul-carrito {
 body .main .section-ropa {
   display: flex;
   justify-content: center;
-  background: #1f1e1e;
+  background: black;
   padding-top: 2em;
   padding-bottom: 2.5em;
 }

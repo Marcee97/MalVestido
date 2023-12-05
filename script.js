@@ -65,10 +65,10 @@ botonProductosOpciones.addEventListener('click',()=>{
     let paddingproductodespl = window.getComputedStyle(productosDesplegado).padding;
     productosDesplegado.style.height = displayProductoDesp === '0px' ? '30vh' : '0'
     productosDesplegado.style.padding = paddingproductodespl === '0px' ? '7px' : '0px'
-    let colorhr = window.getComputedStyle(hrProductos).backgroundColor;
+    
 
-    hrProductos.style.backgroundColor = colorhr === 'rgb(64, 64, 64)' ? 'rgb(0,0,0)' : 'rgb(64, 64, 64)'
-    // displayCambios(hrProductos)
+   
+   
     
 })
 

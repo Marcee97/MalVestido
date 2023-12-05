@@ -159,7 +159,7 @@ body .header .contenedor-menu-completo .ul-productos-desplegable {
   height: 0;
   overflow: hidden;
   top: 182px;
-  transition: 0.5s all;
+  transition: 0.3s all;
   font-family: monospace;
   list-style: none;
   display: flex;

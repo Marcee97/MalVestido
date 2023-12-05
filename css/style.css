@@ -102,13 +102,12 @@ body .header .nav .numero-de-compras {
   border-radius: 15px;
   z-index: 0;
 }
-body .header .ul-menu {
+body .header .contenedor-menu-completo .ul-menu {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   list-style: none;
-  background: rgba(0, 0, 0, 0.98);
-  padding: 0px;
+  background: black;
   overflow: hidden;
   transition: 0.3s;
   width: 80%;
@@ -117,29 +116,63 @@ body .header .ul-menu {
   position: absolute;
   backdrop-filter: blur(2px);
   z-index: 55;
-  padding: 2px;
   font-family: monospace;
   font-size: 1.2em;
 }
-body .header .ul-menu hr {
-  background-color: #3f3e3e;
+body .header .contenedor-menu-completo .ul-menu hr {
+  background-color: rgb(64, 64, 64);
   height: 1px;
   border: 0;
-  margin: 5px 0px 5px 0px;
+  margin: 0px 0px 5px 0px;
   width: 100%;
+  transition: 1.1s all;
 }
-body .header .ul-menu .btn-cerrar-menu {
+body .header .contenedor-menu-completo .ul-menu .btn-cerrar-menu {
+  display: flex;
+  justify-content: end;
   text-align: end;
-  margin: 5px;
+  margin-left: -8px;
   cursor: pointer;
 }
-body .header .ul-menu li {
+body .header .contenedor-menu-completo .ul-menu li {
   font-size: 1.2em;
   margin-top: 9px;
-  transition: 1s all;
-  padding: 0.3em;
+  width: 100%;
+  cursor: pointer;
 }
-body .header .ul-menu.activo {
+body .header .contenedor-menu-completo .ul-menu .opciones {
+  padding: 7px;
+}
+body .header .contenedor-menu-completo .ul-menu .li-productos-desplegable {
+  display: flex;
+  justify-content: space-between;
+}
+body .header .contenedor-menu-completo .ul-menu .li-productos-desplegable span {
+  margin-right: 5px;
+  font-size: 1.2em;
+}
+body .header .contenedor-menu-completo .ul-productos-desplegable {
+  position: absolute;
+  z-index: 56;
+  background-color: #161616;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  top: 182px;
+  transition: 0.5s all;
+  font-family: monospace;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0px;
+  margin-left: -7px;
+}
+body .header .contenedor-menu-completo .ul-productos-desplegable li {
+  font-family: monospace;
+  font-size: 1em;
+}
+body .header .contenedor-menu-completo .ul-menu.activo {
   visibility: visible;
   transform: translateX(-100%);
 }
@@ -148,7 +181,6 @@ body .header .section-carrito {
   overflow: hidden;
   height: 100vh;
   width: 100%;
-  outline: 1px solid red;
   top: 0px;
 }
 body .header .section-carrito .contenedor-seccion-carrito {

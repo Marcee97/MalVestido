@@ -105,13 +105,18 @@ body {
         z-index: 0;
       }
     }
+    .contenedor-menu-completo{
+      
+      
+   
+    
     .ul-menu {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       list-style: none;
-      background: rgba($color: #000000, $alpha: 0.98);
-      padding: 0px;
+      background: rgba($color: #000000, $alpha: 1.0);
+    
       overflow: hidden;
       transition: 0.3s;
       width: 80%;
@@ -120,42 +125,89 @@ body {
       position: absolute;
       backdrop-filter: blur(2px);
       z-index: 55;
-      padding: 2px;
+      
       font-family: monospace;
       font-size: 1.2em;
       hr {
-        background-color: #3f3e3e;
+        background-color: rgb(64, 64, 64);
         height: 1px;
         border: 0;
-        margin: 5px 0px 5px 0px;
+        margin: 0px 0px 5px 0px;
         width: 100%;
+        transition: 1.1s all;
       }
       .btn-cerrar-menu {
+     
+        display: flex;
+        justify-content: end;
         text-align: end;
-        margin: 5px;
+        margin-left: -8px;
         cursor: pointer;
+      
+        
       }
+
       li {
         font-size: 1.2em;
         margin-top: 9px;
-        transition: 1s all;
-        // border: 0.01px solid #fff;
-        // border-left: none;
-        // border-right: none;
-        padding: 0.3em;
+        
+        width: 100%;
+        cursor: pointer;
       }
+      
+
+     
+      .opciones{
+       padding: 7px;
+      
+      }
+      .li-productos-desplegable{
+        display: flex;
+        justify-content: space-between;
+        
+     
+        span{
+          margin-right: 5px;
+          font-size: 1.2em;
+        }
+      }
+    }
+    .ul-productos-desplegable{
+      position: absolute;
+      z-index: 56;
+      background-color: #161616;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      top: 182px;
+      transition: .5s all;
+      font-family: monospace; 
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 0px;
+      margin-left: -7px;
+      
+     
+      li{
+        
+        font-family: monospace;
+        font-size: 1em;
+      }
+    
     }
     .ul-menu.activo {
       visibility: visible;
       transform: translateX(-100%);
     }
+  }
 
     .section-carrito {
       position: absolute;
       overflow: hidden;
       height: 100vh;
       width: 100%;
-      outline: 1px solid red;
       top: 0px;
 
       .contenedor-seccion-carrito {

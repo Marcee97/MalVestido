@@ -189,7 +189,6 @@ body {
       padding: 0px;
       margin-left: -7px;
       
-     
       li{
         
         font-family: monospace;
@@ -254,34 +253,42 @@ body {
 
   .main {
     .section-ropa {
-      display: flex;
-      justify-content: center;
+      
+      display: grid;
+     
+      grid-template-columns: 1fr 1fr;
+      gap: 5px;
+      grid-template-rows: 1fr;
       background:rgba($color: #000000, $alpha: 1.0);
-      padding-top: 2em;
-      padding-bottom: 2.5em;
-
+      position: relative;
       .contenedor-ropa {
         display: flex;
         flex-direction: column;
-        width: 48%;
-        margin: 5px;
+        padding-bottom: 2.3em;
         position: relative;
-        color: #fff;
+        background: #000;
         font-family: monospace;
         font-size: 1.2em;
+        position: relative;
+        img{
+          object-fit: cover;
+          width: 100%;
+          max-width: 300px;
+          position: relative;
+        
+        }
         .ropa-info {
           text-align: center;
-
+          color: #fff;
           .button-add-carrito {
             display: flex;
             justify-content: center;
             align-items: center;
             position: absolute;
-            bottom: 26%;
-            transform: translateY(-26%);
+            bottom: 94px;
+            
             left: 50%;
             transform: translateX(-50%);
-
             border: none;
             width: 90%;
             padding: 4px;
@@ -289,6 +296,7 @@ body {
             color: #fff;
             font-size: 0.6em;
             cursor: pointer;
+           
             .truck-envios {
               margin-right: 11px;
               transform: rotateY(180deg);

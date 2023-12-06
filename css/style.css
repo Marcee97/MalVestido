@@ -221,32 +221,39 @@ body .header .section-carrito .ul-carrito {
   font-size: 1.2em;
 }
 body .main .section-ropa {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  grid-template-rows: 1fr;
   background: black;
-  padding-top: 2em;
-  padding-bottom: 2.5em;
+  position: relative;
 }
 body .main .section-ropa .contenedor-ropa {
   display: flex;
   flex-direction: column;
-  width: 48%;
-  margin: 5px;
+  padding-bottom: 2.3em;
   position: relative;
-  color: #fff;
+  background: #000;
   font-family: monospace;
   font-size: 1.2em;
+  position: relative;
+}
+body .main .section-ropa .contenedor-ropa img {
+  object-fit: cover;
+  width: 100%;
+  max-width: 300px;
+  position: relative;
 }
 body .main .section-ropa .contenedor-ropa .ropa-info {
   text-align: center;
+  color: #fff;
 }
 body .main .section-ropa .contenedor-ropa .ropa-info .button-add-carrito {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 26%;
-  transform: translateY(-26%);
+  bottom: 94px;
   left: 50%;
   transform: translateX(-50%);
   border: none;

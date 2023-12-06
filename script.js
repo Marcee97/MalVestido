@@ -66,9 +66,5 @@ botonProductosOpciones.addEventListener('click',()=>{
     productosDesplegado.style.height = displayProductoDesp === '0px' ? '30vh' : '0'
     productosDesplegado.style.padding = paddingproductodespl === '0px' ? '7px' : '0px'
     
-
-   
-   
-    
 })
 

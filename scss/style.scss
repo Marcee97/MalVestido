@@ -1,7 +1,7 @@
 @import "./resets/reset.scss";
 
 body {
-  overflow: hidden;
+ 
 
   .header {
     .nav {
@@ -253,12 +253,12 @@ body {
 
   .main {
     .section-ropa {
-      
+    
       display: grid;
      
       grid-template-columns: 1fr 1fr;
       gap: 5px;
-      grid-template-rows: 1fr;
+      
       background:rgba($color: #000000, $alpha: 1.0);
       position: relative;
       .contenedor-ropa {

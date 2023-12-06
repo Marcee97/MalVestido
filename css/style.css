@@ -4,9 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  overflow: hidden;
-}
 body .header .nav {
   display: flex;
   width: 100%;
@@ -224,7 +221,6 @@ body .main .section-ropa {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
-  grid-template-rows: 1fr;
   background: black;
   position: relative;
 }

@@ -14,15 +14,20 @@ const productosDesplegado       = document.querySelector('.ul-productos-desplega
 const botonProductosOpciones    = document.querySelector('.boton-productos-opciones');
 const hrProductos               = document.querySelector('.hr3');
 const imgProductos              = document.querySelectorAll('.img-productos');
-const contenedorDeCadaProducto  = document.querySelectorAll('.contenedor-ropa')
-const modalBtnTalle             = document.querySelectorAll('.modal-btn-talle')
+const contenedorDeCadaProducto  = document.querySelectorAll('.contenedor-ropa');
+const modalBtnTalle             = document.querySelectorAll('.modal-btn-talle');
+const modalDeComprasDesplegable = document.querySelector('.modal-de-compra');
+const modalDescripcionInf       = document.querySelector('.modal-descripcion-producto-inferior');
+const modalImg                  = document.querySelector('.modal-img')
 
-botonAddCarrito.forEach((botones)=>{
 
-botones.addEventListener('click',()=>{
-    console.log('apretaste el boton carrito')
+titulo.addEventListener('click',()=>{
+    modalDeComprasDesplegable.classList.toggle('modal-de-compra-activo');
+    modalDescripcionInf.textContent = "" 
+    modalImg.src = ""
+    
 })
-})
+
 
 
 botonMenu.addEventListener('click',()=>{
@@ -82,7 +87,9 @@ contenedorDeCadaProducto.forEach((e,index)=>{
         let modalPrecio             = document.querySelector('.modal-precio');
         let modalInfo               = document.querySelector('.modal-info');
         let ropaInfo                = document.querySelector('.ropa-info');
-        const mainPrecio            = document.querySelectorAll('.main-precio');
+        let mainPrecio              = document.querySelectorAll('.main-precio');
+        let modalImg                = document.querySelector('.modal-img')
+       
        
         
 
@@ -96,11 +103,8 @@ contenedorDeCadaProducto.forEach((e,index)=>{
 
         descripcionDeProducto.classList.add('modal-descripcion-de-producto');
         modalDeCompras.classList.toggle('modal-de-compra-activo');
-        let imgCreada = document.createElement('img');
-        imgCreada.classList.add('modal-img');
         let srcImgObtenido = e.firstElementChild.src
-        imgCreada.src = srcImgObtenido
-        modalDeCompras.appendChild(imgCreada);
+        modalImg.src = srcImgObtenido
         modalPrecio.style.order = 3
     })
 })

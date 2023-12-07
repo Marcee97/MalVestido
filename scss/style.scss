@@ -4,6 +4,9 @@ body {
  
 
   .header {
+    .titulo{
+      cursor: pointer;
+    }
     .nav {
       display: flex;
       width: 100%;

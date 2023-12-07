@@ -18,13 +18,15 @@ const contenedorDeCadaProducto  = document.querySelectorAll('.contenedor-ropa');
 const modalBtnTalle             = document.querySelectorAll('.modal-btn-talle');
 const modalDeComprasDesplegable = document.querySelector('.modal-de-compra');
 const modalDescripcionInf       = document.querySelector('.modal-descripcion-producto-inferior');
-const modalImg                  = document.querySelector('.modal-img')
+const modalImg                  = document.querySelector('.modal-img');
+const menuVisibleSuperior     = document.querySelector('.contenedor-menu-visible')
 
 
 titulo.addEventListener('click',()=>{
     modalDeComprasDesplegable.classList.add('modal-de-compra-activo');
     modalDescripcionInf.textContent = "" 
     modalImg.src = ""
+    displayCambios(menuVisibleSuperior)
     
 })
 
@@ -89,9 +91,9 @@ contenedorDeCadaProducto.forEach((e,index)=>{
         let ropaInfo                = document.querySelector('.ropa-info');
         let mainPrecio              = document.querySelectorAll('.main-precio');
         let modalImg                = document.querySelector('.modal-img')
-       
-       
         
+       
+        displayCambios(menuVisibleSuperior)
 
         let precioSeleccionado = mainPrecio[index].textContent;
         modalPrecio.textContent = precioSeleccionado;

@@ -102,6 +102,33 @@ body .header .nav .numero-de-compras {
   border-radius: 15px;
   z-index: 0;
 }
+body .header .contenedor-menu-visible {
+  background: rgba(0, 0, 0, 0.96);
+  display: block;
+  width: 100%;
+}
+body .header .contenedor-menu-visible ul {
+  display: flex;
+  padding: 0.9em;
+  width: 100%;
+  list-style: none;
+}
+body .header .contenedor-menu-visible ul li {
+  background: #2c2c2c;
+  margin: 9px;
+  color: #fff;
+  font-family: monospace;
+  position: relative;
+  z-index: 60;
+  padding: 0.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.3em;
+}
+body .header .contenedor-menu-visible ul li a {
+  text-decoration: none;
+  color: #fff;
+}
 body .header .contenedor-menu-completo .ul-menu {
   display: flex;
   flex-direction: column;
@@ -114,8 +141,9 @@ body .header .contenedor-menu-completo .ul-menu {
   height: 100vh;
   color: #fff;
   position: absolute;
+  top: 60px;
   backdrop-filter: blur(2px);
-  z-index: 55;
+  z-index: 65;
   font-family: monospace;
   font-size: 1.2em;
 }
@@ -235,7 +263,7 @@ body .main .section-ropa .modal-de-compra {
   position: absolute;
   width: 100%;
   height: 150%;
-  z-index: 60;
+  z-index: 69;
   transition: 0.5s all;
   transform: translateY(0%);
 }
@@ -295,7 +323,7 @@ body .main .section-ropa .modal-de-compra .modal-img {
   order: 2;
 }
 body .main .section-ropa .modal-de-compra-activo {
-  transform: translateY(-112%);
+  transform: translateY(-130%);
 }
 body .main .section-ropa .modal-talles {
   order: 6;
@@ -348,6 +376,16 @@ body .main .section-ropa .modal-ul-img-metodos-de-pago li {
 }
 body .main .section-ropa .modal-ul-img-metodos-de-pago .modal-img-metodos-de-pago {
   width: 43px;
+}
+body .main .section-ropa .modal-btn-agregar-al-carrito {
+  order: 9;
+  color: #000;
+  background: rgb(255, 255, 255);
+  margin: 8px;
+  border: none;
+  padding: 0.4em;
+  font-family: monospace;
+  font-size: 1.3em;
 }
 body .main .section-ropa .contenedor-ropa {
   display: flex;

@@ -19,7 +19,7 @@ body {
       backdrop-filter: blur(2px);
       z-index: 55;
       position: relative;
-
+      
       .contenedor-buscador {
         overflow: hidden;
         width: 100%;
@@ -108,6 +108,36 @@ body {
         z-index: 0;
       }
     }
+    .contenedor-menu-visible{
+      background: rgba($color: #000000, $alpha: 0.96);
+      display: block;
+      width: 100%;
+     ul{
+      display: flex;
+     padding: .9em;
+      width: 100%;
+      list-style: none;
+      
+      li{
+        background: #2c2c2c;
+        margin: 9px;
+        color: #fff;
+        font-family: monospace;
+        position: relative;
+        z-index: 60;
+        padding: .2em;
+        border-radius: 5px;
+       cursor: pointer;
+        font-size: 1.3em;
+        a{
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+
+     }
+
+    }
     .contenedor-menu-completo{
     
     .ul-menu {
@@ -123,8 +153,9 @@ body {
       height: 100vh;
       color: #fff;
       position: absolute;
+      top: 60px;
       backdrop-filter: blur(2px);
-      z-index: 55;
+      z-index: 65;
       
       font-family: monospace;
       font-size: 1.2em;
@@ -263,7 +294,7 @@ body {
         position: absolute;
         width: 100%;
         height: 150%;
-        z-index: 60;
+        z-index: 69;
         transition: .5s all;
         transform: translateY(0%);
         .modal-header{
@@ -328,7 +359,7 @@ body {
         }
       }
       .modal-de-compra-activo{
-        transform: translateY(-112%);
+        transform: translateY(-130%);
       }
       .modal-talles{
         order:6;
@@ -386,6 +417,17 @@ body {
         .modal-img-metodos-de-pago{
           width: 43px;
         }
+      }
+      .modal-btn-agregar-al-carrito{
+        order:9;
+        color:#000;
+        background:rgb(255, 255, 255);
+        margin: 8px;
+        border: none;
+        padding: .4em;
+        font-family: monospace;
+        font-size: 1.3em;
+
       }
       
       .contenedor-ropa {

@@ -12,7 +12,10 @@ const botonAddCarrito           = document.querySelectorAll('.button-add-carrito
 const botonCerrarMenu           = document.querySelector('.btn-cerrar-menu');
 const productosDesplegado       = document.querySelector('.ul-productos-desplegable');
 const botonProductosOpciones    = document.querySelector('.boton-productos-opciones');
-const hrProductos               = document.querySelector('.hr3')
+const hrProductos               = document.querySelector('.hr3');
+const imgProductos              = document.querySelectorAll('.img-productos');
+const contenedorDeCadaProducto  = document.querySelectorAll('.contenedor-ropa')
+const modalBtnTalle             = document.querySelectorAll('.modal-btn-talle')
 
 botonAddCarrito.forEach((botones)=>{
 
@@ -68,3 +71,46 @@ botonProductosOpciones.addEventListener('click',()=>{
     
 })
 
+
+contenedorDeCadaProducto.forEach((e,index)=>{
+
+    e.addEventListener('click',()=>{
+        let modalDeCompras          = document.querySelector('.modal-de-compra');
+        let descripcionDeProducto   = document.querySelector('.modal-descripcion-producto');
+        let descripcionProductoInf  = document.querySelector('.modal-descripcion-producto-inferior')
+        let nombreProducto          = document.querySelectorAll('.nombre-producto');
+        let modalPrecio             = document.querySelector('.modal-precio');
+        let modalInfo               = document.querySelector('.modal-info');
+        let ropaInfo                = document.querySelector('.ropa-info');
+        const mainPrecio            = document.querySelectorAll('.main-precio');
+       
+        
+
+        let precioSeleccionado = mainPrecio[index].textContent;
+        modalPrecio.textContent = precioSeleccionado;
+
+        descripcionDeProducto.textContent = nombreProducto[index].textContent
+        descripcionProductoInf.textContent = nombreProducto[index].textContent
+
+
+
+        descripcionDeProducto.classList.add('modal-descripcion-de-producto');
+        modalDeCompras.classList.toggle('modal-de-compra-activo');
+        let imgCreada = document.createElement('img');
+        imgCreada.classList.add('modal-img');
+        let srcImgObtenido = e.firstElementChild.src
+        imgCreada.src = srcImgObtenido
+        modalDeCompras.appendChild(imgCreada);
+        modalPrecio.style.order = 3
+    })
+})
+
+
+modalBtnTalle.forEach((e,index)=>{
+    e.addEventListener('click',(e)=>{
+        let talleSeleccionado = document.querySelector('.modal-talle-seleccionado');
+        e.preventDefault()
+        talleSeleccionado.textContent = modalBtnTalle[index].textContent
+
+    })
+})

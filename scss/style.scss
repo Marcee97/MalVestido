@@ -253,20 +253,95 @@ body {
 
   .main {
     .section-ropa {
-    
       display: grid;
-     
       grid-template-columns: 1fr 1fr;
       gap: 5px;
-      
-      background:rgba($color: #000000, $alpha: 1.0);
+      background: #111111;
       position: relative;
+      .modal-de-compra{
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        background: #111111;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 60;
+        transition: .5s all;
+        transform: translateY(0%);
+        .modal-header{
+          padding: .5em;
+          a{
+            color: #fff;
+            text-decoration: none;
+            padding: .3em;
+            background: #191919;
+            border-radius: 5px;
+            margin: .3em;
+           
+          }
+        }
+        .modal-descripcion-producto{
+          color: #fff;
+          margin: .5em;
+          font-size: 1.3em;
+          font-family: monospace;
+        }
+        .modal-info{
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          justify-content: start;
+          width: 90%;
+          font-size: 1.9em;
+          order: 3;
+          margin:8px;
+          font-family: monospace;
+          .talle-custom{
+            color: rgb(255, 255, 255);
+            order: 5;
+          }
+          .modal-precio{
+            color: #fff;
+            margin-top: 5px;
+            font-size: 1.5em;
+            
+          }
+          
+        .modal-descripcion-producto-inferior{
+          color: #fff;
+          order: 3;
+        }
+       
+        }
+        .modal-img{
+          margin: 6px;
+          order: 2;
+        }
+      }
+      .modal-de-compra-activo{
+        transform: translateY(-112%);
+      }
+      .modal-talles{
+        order:6;
+        margin: 9px;
+        
+        a{
+          color:#fff;
+          text-decoration: none;
+          font-size: 1.6em;
+          font-family: monospace;
+          background: #161616;
+          border: 2px solid #181818;
+          padding: .5em;
+        }
+      }
       .contenedor-ropa {
         display: flex;
         flex-direction: column;
-        padding-bottom: 2.3em;
+        padding-bottom: .5em;
         position: relative;
-        background: #000;
+        background: #111111;
         font-family: monospace;
         font-size: 1.2em;
         position: relative;
@@ -278,6 +353,7 @@ body {
         
         }
         .ropa-info {
+          padding-top: .3em;
           text-align: center;
           color: #fff;
           .button-add-carrito {
@@ -285,7 +361,7 @@ body {
             justify-content: center;
             align-items: center;
             position: absolute;
-            bottom: 94px;
+            bottom:69px;
             
             left: 50%;
             transform: translateX(-50%);

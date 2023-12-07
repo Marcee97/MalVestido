@@ -109,9 +109,6 @@ body {
       }
     }
     .contenedor-menu-completo{
-      
-      
-   
     
     .ul-menu {
       display: flex;
@@ -147,7 +144,6 @@ body {
         margin-left: -8px;
         cursor: pointer;
       
-        
       }
 
       li {
@@ -158,8 +154,6 @@ body {
         cursor: pointer;
       }
       
-
-     
       .opciones{
        padding: 7px;
       
@@ -268,7 +262,7 @@ body {
         background: #111111;
         position: absolute;
         width: 100%;
-        height: 100%;
+        height: 150%;
         z-index: 60;
         transition: .5s all;
         transform: translateY(0%);
@@ -303,6 +297,17 @@ body {
           .talle-custom{
             color: rgb(255, 255, 255);
             order: 5;
+            border: 1px solid;
+            border-left:none ;
+            border-right: none;
+            border-bottom: none;
+            width: 100%;
+            margin-top: 30px;
+            padding: .3em;
+
+          }
+          .modal-talle-seleccionado{
+            color: rgb(251, 255, 0);
           }
           .modal-precio{
             color: #fff;
@@ -328,6 +333,9 @@ body {
       .modal-talles{
         order:6;
         margin: 9px;
+        margin-top: 19px;
+        
+        
         
         a{
           color:#fff;
@@ -339,6 +347,47 @@ body {
           padding: .5em;
         }
       }
+      
+      .modal-btn-carrito{
+        order: 7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 190px;
+        background: #111111;
+        color: #fff;
+        border: 1px solid #fff;
+        margin: 9px;
+        margin-top: 25px;
+        font-size: 1.4em;
+        font-family: monospace;
+        padding: .2em;
+
+      }
+      .modal-metodos-de-pago{
+        width: 100%;
+        order: 9;
+        color: #fff;
+        font-family: monospace;
+        font-size: 1.6em;
+        margin-top: 30px;
+        border: 1px solid #fff;
+        border-left: none;
+        border-right: none;
+        padding: 1em;
+      }
+      .modal-ul-img-metodos-de-pago{
+        display: flex;
+        list-style: none;
+        li{
+          margin: 2px;
+          margin-top: 9px;
+        }
+        .modal-img-metodos-de-pago{
+          width: 43px;
+        }
+      }
+      
       .contenedor-ropa {
         display: flex;
         flex-direction: column;
@@ -365,7 +414,6 @@ body {
             align-items: center;
             position: absolute;
             bottom:69px;
-            
             left: 50%;
             transform: translateX(-50%);
             border: none;

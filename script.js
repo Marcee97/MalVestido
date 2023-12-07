@@ -22,7 +22,7 @@ const modalImg                  = document.querySelector('.modal-img')
 
 
 titulo.addEventListener('click',()=>{
-    modalDeComprasDesplegable.classList.toggle('modal-de-compra-activo');
+    modalDeComprasDesplegable.classList.add('modal-de-compra-activo');
     modalDescripcionInf.textContent = "" 
     modalImg.src = ""
     
